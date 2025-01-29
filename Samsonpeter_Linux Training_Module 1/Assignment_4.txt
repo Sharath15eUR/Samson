@@ -1,0 +1,8 @@
+ps
+
+Terminal
+greeniee@greeniee-VirtualBox:~$ ps
+PID TTY       TIME CMD
+4131 pts/0   00:00:00 bash
+4334 pts/0   00:00:00 ps
+greeniee@greeniee-VirtualBox:~$

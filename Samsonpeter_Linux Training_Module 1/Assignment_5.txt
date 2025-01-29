@@ -1,0 +1,15 @@
+mkdir dir3
+touch dir3/file1.txt dir3/file2.txt dir3/file3.txt
+ls -lt dir3 >sortedfiles.txt
+cat sortedfiles.txt
+
+Terminal
+greeniee@greeniee-VirtualBox:~$ mkdir dir3
+greeniee@greeniee-VirtualBox touch dir3/file1.txt dir3/file2.txt dir3/file3.txt
+greeniee@greeniee-VirtualBox:~$ ls -lt dir3>sortedfiles.txt
+greeniee@greeniee-VirtualBox:~$ cat sortedfiles.txt
+total 0
+-rw-rw-г-- 1 greeniee greeniee 0 Jan 29 21:35 file1.txt
+-rw-rw-г-- 1 greeniee greeniee 0 Jan 29 21:35 file2.txt
+-rw-rw-г-- 1 greeniee greeniee 0 Jan 29 21:35 file3.txt
+greeniee@greeniee-VirtualBox:~$

@@ -1,0 +1,11 @@
+touch test_1.txt
+chmod a+x test_1.txt
+ls -l test_1.txt
+
+
+Output:
+greeniee@greeniee-VirtualBox:~$ touch test_1.txt 
+greeniee@greeniee-VirtualBox:~$ chmod a+x test_1.txt 
+greeniee@greeniee-VirtualBox:~$ ls -l test_1.txt
+-rwxrwxr-x 1 greeniee greeniee 0 Jan 27 10:23 test_1.txt
+greeniee@greentee-VirtualBox:~$

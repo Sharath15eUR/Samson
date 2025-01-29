@@ -1,0 +1,11 @@
+touch test_2.txt
+chmod g-w test_2.txt
+ls -l test_2.txt
+
+
+Terminal
+greeniee@greeniee-VirtualBox:~$ touch test_2.txt
+greeniee@greeniee-VirtualBox:~$ chmod g-w test_2.txt
+greeniee@greeniee-VirtualBox:~$ ls -l test_2.txt
+-rw-г--г-- 1 greeniee greeniee 0 Jan 27 10:38 test_2.txt
+greeniee@greeniee-VirtualBox:~$
