@@ -1,0 +1,6 @@
+ip routes | grep "default" | awk {'print $3'} | sort -u
+
+Terminal
+greentee@greeniee-VirtualBox:~$ ip route | grep default | awk {'print $3'} |sort-u
+10.0.2.2
+greeniee@greeniee-VirtualBox:~$
