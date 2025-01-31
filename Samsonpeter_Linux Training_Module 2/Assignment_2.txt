@@ -1,0 +1,10 @@
+sed '/s/localhost/127.0.0.1/g config.txt > updated_config.txt
+cat updated_config.txt
+
+Terminal
+greeniee@greeniee-VirtualBox:~$ sed 's/localhost/127.0.0.1/g' config.txt >updated_config.txt
+greeniee@greeniee-VirtualBox:~$ cat updated_config.txt
+server=127.0.0.1
+database=127.0.0.1
+host=127.0.0.1
+greeniee@greeniee-VirtualBox:~$
