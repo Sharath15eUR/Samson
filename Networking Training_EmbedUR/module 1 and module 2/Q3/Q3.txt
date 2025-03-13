@@ -1,0 +1,7 @@
+Wireshark is a network protocol analyzer used for capturing and inspecting network traffic in real time. It helps in troubleshooting, security analysis, and network monitoring by displaying detailed packet-level information.
+
+Wireshark provides filters to refine the captured traffic:
+
+Capture Filters – Applied before capturing traffic to limit the data collected (e.g., port 80 for HTTP traffic).
+Display Filters – Applied after capturing to refine the view of packets (e.g., http to show only HTTP traffic).
+I have used an HTTP filter to capture data from an HTTP server. This allowed me to analyze HTTP requests, responses, headers, and payloads, which is useful for debugging, performance monitoring, and security analysis.
