@@ -1,0 +1,10 @@
+Given Network Address: 10.0.0.0/24
+To be divided into 4 equal parts
+2^2 =4
+therefore it shall be 10.0.0.0/26
+therefore subnet would be 255.255.255.192
+Each subnet will contain 64 total addresses (62 usable).
+Subnet 1		10.0.0.1 - 10.0.0.62
+Subnet 2		10.0.0.65 - 10.0.0.126
+Subnet 3		10.0.0.129 - 10.0.0.190
+Subnet 4	        10.0.0.193 - 10.0.0.254	

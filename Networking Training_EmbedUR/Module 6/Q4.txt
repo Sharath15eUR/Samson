@@ -1,0 +1,16 @@
+Given IP Addresses:
+192.168.10.5
+172.20.15.1
+8.8.8.8
+
+192.168.10.5 -Class C
+172.20.15.1-Class B
+8.8.8.8-Class A
+
+192.168.10.5 -Private IP
+172.20.15.1 -Private IP
+8.8.8.8 -Public IP
+
+
+How NAT Handles a Private IP
+Private IP addresses are used within local networks and cannot be accessed directly over the internet. These addresses fall within specific reserved ranges: 10.0.0.0 to 10.255.255.255, 172.16.0.0 to 172.31.255.255, and 192.168.0.0 to 192.168.255.255. Devices within a network communicate using private IP addresses, but when they need to access the internet, they require a public IP address. Public IP addresses are assigned by Internet Service Providers (ISPs) and are globally unique, allowing devices to communicate over the internet. Since private IP addresses cannot be routed on the internet, a mechanism called Network Address Translation (NAT) is used. NAT translates private IP addresses into a public IP address when a device from a local network communicates with an external server. When a request is sent to the internet, NAT replaces the source private IP with a public IP, allowing the request to reach its destination. When the response comes back, NAT maps it back to the corresponding private IP within the network, ensuring that the data reaches the correct device. This process enables multiple devices within a private network to share a single public IP for internet access, improving security and conserving the limited number of IPv4 addresses available.
