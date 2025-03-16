@@ -1,0 +1,4 @@
+EtherType :IPv4 (0x0800)
+IP Total Length	:112
+IP Header Length :20	
+Payload Size	:92

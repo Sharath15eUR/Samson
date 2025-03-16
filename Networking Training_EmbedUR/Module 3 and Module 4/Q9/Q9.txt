@@ -1,0 +1,40 @@
+
+A Local Area Network (LAN) interface allows communication between devices within a network, such as computers, servers, and network switches. Configuring a LAN interface in Linux involves assigning an IP address, bringing up the interface, and ensuring network connectivity.
+
+
+Command:
+ip link show
+sudo ip addr add 192.168.10.3/24 dev enp0s3
+sudo ip link set enp0s3 up
+sudo ip route add default via 192.168.10.3
+ip addr show enp0s3
+ip route show
+
+
+Terminal:
+greentee@greentee-VirtualBox:-$ ip link show
+1: lo: <LOOPBACK, UP, LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enpos3: <BROADCAST, MULTICAST, UP, LOWER_UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000
+link/ether 08:00:27:4b:b5:72 brd ff:ff:ff:ff:ff:ff
+greentee@greeniee-VirtualBox:~$ sudo ip addr add 192.168.10.3/24 dev enpes3
+Error: ipv4: Address already assigned.
+greeniee@greeniee-VirtualBox:~$ sudo ip link set enpes3 up
+greeniee@greeniee-VirtualBox:~$ sudo ip route add default via 192.168.10.3
+greeniee@greeniee-VirtualBox:~$ ip addr show enp0s3
+2: enpos3: <BROADCAST, MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+link/ether 08:00:27:4b:b5:72 brd ff:ff:ff:ff:ff:ff
+inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enpos3
+valid_lft 75357sec preferred_lft 75357sec
+inet 192.168.10.3/24 scope global enpos3
+valid_lft forever preferred_lft forever
+inet6 fd00::8788:4378:967a:99a2/64 scope global temporary dynamic
+valid_lft 86168sec preferred_lft 14168sec
+inet6 fd00::a00:27ff:fe4b:b572/64 scope global dynamic mngtmpaddr
+valid_lft 86168sec preferred_lft 14168sec
+inet6 fe80::a00:27ff:fe4b:b572/64 scope link
+valid_lft forever preferred_lft forever
+greeniee@greeniee-VirtualBox:-$ ip route show
+default via 192.168.10.3 dev enpos3
+default via 10.0.2.2 dev enpes3 proto dhcp src 10.0.2.15 metric 100 10.0.2.0/24 dev enpos3 proto kernel scope link src 10.0.2.15 metric 100
+192.168.10.0/24 dev enp0s3 proto kernel scope link src 192.168.10.3
