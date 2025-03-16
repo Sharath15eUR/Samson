@@ -1,0 +1,13 @@
+### **Dynamic Host Configuration Protocol (DHCP) Process**  
+
+The **Dynamic Host Configuration Protocol (DHCP)** is a network management protocol used to automatically assign **IP addresses** and other network configuration settings to devices. This eliminates the need for manual IP assignment, making network management more efficient. When a device (such as a computer, smartphone, or IoT device) connects to a network, it follows a four-step process known as the **DORA process**, which includes **Discover, Offer, Request, and Acknowledge**.  
+
+The first step in the DHCP process is **DHCP Discover**. When a device connects to a network, it does not have an IP address. It sends a **broadcast message** to all devices on the network, asking if there is a DHCP server available. This message is sent from `0.0.0.0` (since the device has no IP yet) to `255.255.255.255` (broadcast address), requesting an IP address. The purpose of this step is to locate a DHCP server that can provide an IP address.  
+
+Next, the DHCP server responds with a **DHCP Offer** message. This message contains an available IP address, along with additional network settings such as the **subnet mask, default gateway, and DNS server information**. The DHCP Offer is sent from the server’s IP address to the client, suggesting an available IP for the client to use.  
+
+Once the client receives the offer, it responds with a **DHCP Request** message. In this step, the client informs the DHCP server that it wants to use the offered IP address. If multiple DHCP servers respond with different offers, the client selects one and sends the request to confirm its choice. This request is also broadcasted to inform other DHCP servers that it has selected an IP.  
+
+Finally, the DHCP server sends a **DHCP Acknowledge (ACK)** message, confirming the assignment of the IP address to the client. This message also includes the lease time, which specifies how long the client can use the IP address before it must request renewal. Once the acknowledgment is received, the client is successfully configured and can communicate within the network.  
+
+In summary, DHCP simplifies the process of assigning IP addresses and network settings by automating it. The **DORA process (Discover, Offer, Request, Acknowledge)** ensures that devices receive a valid IP address without manual configuration, reducing errors and improving efficiency in network management.

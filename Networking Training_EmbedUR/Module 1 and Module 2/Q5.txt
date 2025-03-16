@@ -1,0 +1,3 @@
+When two or more devices in the same network are assigned the same IP address, it creates an IP address conflict. This can cause severe connectivity issues, security risks, and system failures.
+An IP conflict occurs when two devices on the same network have the same IP address. Since IP addresses are meant to be unique identifiers, when a conflict occurs, the network doesn't know where to send packets, leading to communication failures.
+Devices with duplicate IPs cannot communicate properly because the network gets confused about where to send packets.This results in connection drops, timeouts, or slow network speeds.

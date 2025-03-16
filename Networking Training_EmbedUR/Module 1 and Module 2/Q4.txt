@@ -1,0 +1,62 @@
+ping:
+The ping command checks if a device (host) is reachable over the network by sending ICMP (Internet Control Message Protocol) echo requests and waiting for replies. It helps diagnose network issues like packet loss, latency, or disconnection.
+ 
+Terminal:
+greeniee@greeniee-VirtualBox:~$ ping -c 5 google.com
+PING google.com (142.250.205.142) 56(84) bytes of data.
+64 bytes from pnmaaa-aw-in-f14.1e100.net (142.250.205.142): mathfrak tcmp\ seq = 1 ttl=255 time=58.6 ms
+64 bytes from pnmaaa-aw-in-f14.1e100.net (142.250.205.142): mathfrak tcmp\ seq = 2 ttl=255 time=67.8 ms
+64 bytes from pnmaaa-aw-in-f14.1e100.net (142.250.205.142): mathfrak kcmp\ seq = 3 ttl=255 time=55.1 ms
+64 bytes from pnmaaa-aw-in-f14.1e100.net (142.250.205.142): mathfrak Lcmp\ seq = 4 ttl=255 ne = 42.5ns
+64 bytes from pnmaaa-aw-in-f14.1e100.net (142.250.205.142): mathfrak Lcmp\ seq = 5 ttl=255 time=50.9 ms
+google.com ping statistics
+5 packets transmitted, 5 received, 0% packet loss, time 4011ms
+rtt min/avg/max/mdev = 42.481/54.968/67.833/8.375 ms
+greeniee@greeniee-VirtualBox:~$
+
+Observation:
+Here i have pinged google.com with 5 packets and the connectivity, Latency and packet loss% is observed
+
+
+arp:
+The Address Resolution Protocol (ARP) resolves an IP address to a MAC (Media Access Control) address, which is essential for communication in local networks. The arp command helps in checking and managing these mappings.When a device wants to send data to another device on the same network, it needs the recipient's MAC address. Since devices communicate using IP addresses, ARP helps find the corresponding MAC address before sending the data.
+
+Terminal:
+greeniee@greeniee-VirtualBox:~$ arp -a
+_gateway (10.0.2.2) at 52:55:08:00:02:02 [ether] on enp0s3
+? (10.0.2.3) at 52:55:08:00:02:03 [ether] on enpos3
+greentee@greeniee-VirtualBox:~$ 
+
+Observation 
+Here i have noticed that the machine has stored the MAC address of two other machines through ARP and has their IP stored
+
+ifconfig
+The ifconfig (interface configuration) command displays network interface details such as IP address, MAC address, netmask, and status. It is mainly used for troubleshooting or configuring network settings.
+
+Terminal:
+greentee@greentee-VirtualBox:-$ ifconfig
+
+enpes3: flags=4163<UP, BROADCAST, RUNNING, MULTICAST> mtu 1500
+
+inet 10.0.2.15 netmask 255.255.255.0 broadcast 10.0.2.255
+inet6 fe80::a08:27ff:fe4b:b572 prefixlen 64 scopeid 0x20<link>
+inet6 fd00::9bf:9dd6:a9a0:f097 prefixlen 64 scopeld 0x0<global>
+inet6 fd00::a00:27ff:fe4b:b572 prefixlen 64 scopeld exe<global>
+
+ether 08:00:27:4b:b5:72 txqueuelen 1000 (Ethernet)
+RX packets 86763 bytes 125868851 (125.8 MB)
+RX errors dropped overruns e frame e
+TX packets 6078 bytes 700352 (700.3 KB)
+TX errors dropped e overruns e carrier e collisions e
+lo: flags=73-UP, LOOPBACK, RUNNING> mtu 65536
+inet 127.0.0.1 netmask 255.0.0.0
+inet6::1 prefixlen 128 scopeid ex10<host>
+loop txqueuelen 1000 (Local Loopback)
+RX packets 1039 bytes 112339 (112.3 KB)
+RX errors dropped overruns 0 frame e
+TX packets 1039 bytes 112339 (112.3 KB)
+TX errors e dropped overruns e carrier & collisions θ
+greeniee@greeniee-VirtualBox:-$
+
+Observation
+Here I have noticed that through ifconfig a machine 's IPV4 ,IPV6 ,MAC addresses could be accessed

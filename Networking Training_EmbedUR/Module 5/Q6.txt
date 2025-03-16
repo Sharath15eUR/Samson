@@ -1,0 +1,18 @@
+10.1.1.1
+
+First octet: 10
+Class: A (Class A ranges from 1 to 126)
+Default subnet mask: 255.0.0.0
+Range of IPs: 10.0.0.0 - 10.255.255.255
+172.16.5.10
+
+First octet: 172
+Class: B (Class B ranges from 128 to 191)
+Default subnet mask: 255.255.0.0
+Range of IPs: 172.16.0.0 - 172.31.255.255
+192.168.1.5
+
+First octet: 192
+Class: C (Class C ranges from 192 to 223)
+Default subnet mask: 255.255.255.0
+Range of IPs: 192.168.1.0 - 192.168.1.255

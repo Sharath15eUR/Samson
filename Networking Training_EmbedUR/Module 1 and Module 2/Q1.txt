@@ -1,0 +1,41 @@
+Command line:
+sudo apt install openssh-server-y
+cd test
+touch test2.txt
+touch test3.txt
+touch test4.txt
+cd
+scp-r test greninja@10.0.2.15:/home/greninja/
+ssh greninja@10.0.2.15
+ls-l /home/greninja/
+ls-l /home/greninja/test
+
+Terminal:
+greeniee@greeniee-VirtualBox:~$ cd test
+greeniee@greeniee-VirtualBox:~/test$ touch test2.txt
+greeniee@greeniee-VirtualBox:~/test$ touch test3.txt
+greeniee@greeniee-VirtualBox:~/test$ touch test4.txt
+greeniee@greeniee-VirtualBox:~/test$ cd
+greeniee@greeniee-VirtualBox:~$ scp -r test greninja@10.0.2.15:/home/greninja
+greninja@10.0.2.15's password:
+test3.txt                      100%  0  0.0KB/s  00:00
+test2.txt                      100%  0  0.0KB/s  00:00
+test4.txt                      100%  0  0.0KB/s  00:00
+test.txt                       100%  87KB  6.2MB/S  00:00 
+greeniee@greentee-VirtualBox:-$ ssh greninja@10.0.2.15
+greninja@10.0.2.15's password:
+$ ls -l /home/greninja/
+
+total 12
+-rw-rw-r-- 1 greninja greninja 24 Маг 11 21:16 myfile.txt
+drwx------ 4 greninja greninja 4096 Маг 12 09:56 snap
+drwxrwxr-x 2 greninja greninja 4096 Маг 12 12:55 test
+$ ls -l /home/greninja/test/
+total 88
+-rw-rw-r-- 1 greninja greninja  0 Маг 12 12:55 test2.txt
+-rw-rw-r-- 1 greninja greninja  0 Маг 12 12:55 test3.txt
+-rw-rw-r-- 1 greninja greninja  0 Маг 12 12:55 test4.txt
+-rw-rw-r-- 1 greninja greninja  89100 Маг 12 12:55 test.txt
+
+
+

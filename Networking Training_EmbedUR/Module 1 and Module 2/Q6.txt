@@ -1,0 +1,9 @@
+Remote access lets you control a computer or server from another location. It’s useful for IT support, managing files, troubleshooting, and remote work. There are several ways to do this, depending on what you need.
+
+Remote access systems such as VNC Viewer, AnyDesk, TeamViewer, and similar applications typically follow these steps:
+
+Install the remote access software on both the client and host systems.
+The client and host exchange an address or access code provided by the application.
+The client sends a request to connect to the host system.
+The host system accepts the request, often requiring manual confirmation or a password.
+The client gains access to the host’s desktop, enabling control and interaction.

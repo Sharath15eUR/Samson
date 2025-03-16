@@ -1,0 +1,14 @@
+We are given the IP range 192.168.1.0/24, which means we have 256 total IP addresses (from 192.168.1.0 to 192.168.1.255). Now, we need to split this into 4 subnets.
+Each subnet increases in increments of 64. Here’s how they break down:
+Subnet 1:
+Network Address: 192.168.1.0
+Usable IPs: 192.168.1.1 – 192.168.1.62
+Subnet 2:
+Network Address: 192.168.1.64
+Usable IPs: 192.168.1.65 – 192.168.1.126
+Subnet 3:
+Network Address: 192.168.1.128
+Usable IPs: 192.168.1.129 – 192.168.1.190
+Subnet 4:
+Network Address: 192.168.1.192
+Usable IPs: 192.168.1.193 – 192.168.1.254
